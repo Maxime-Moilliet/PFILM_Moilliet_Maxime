@@ -12,6 +12,7 @@
         line-height: 96px;
         color: #fff;
         margin: 0;
+        background-color: transparent;
     }
 
     &__content {
@@ -20,6 +21,7 @@
         margin: 0 auto;
         margin-top: $space-3xl;
         max-width: 1200px;
+        background-color: transparent;
     }
 }
 

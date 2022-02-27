@@ -1,9 +1,37 @@
+.container {
+    padding: 0px 200px;
+}
+@media #{$screen-xl} {
+    .container {
+        padding: 0px 160px;
+    }
+}
+@media #{$screen-lg} {
+    .container {
+        padding: 0px 100px;
+    }
+}
+@media #{$screen-md} {
+    .container {
+        padding: 0px $space-2xl;
+    }
+}
+@media #{$screen-sm} {
+    .container {
+        padding: 0px $space-md;
+    }
+}
+@media #{$screen-xs} {
+    .container {
+        padding: 0px $space-xs;
+    }
+}
+
 .text-content {
     font-size: 22px;
     line-height: 40px;
     font-weight: $font-weight-semibold;
 }
-
 @media #{$screen-lg} {
     .text-content {
         font-size: 20px;
@@ -27,5 +55,36 @@
     .text-content {
         font-size: 17px;
         line-height: 22px;
+    }
+}
+
+.title-section {
+    font-size: 80px;
+    line-height: 100px;
+    color: #fff;
+    font-weight: $font-weight-bold;
+}
+@media #{$screen-lg} {
+    .title-section {
+        font-size: 70px;
+        line-height: 90px;
+    }
+}
+@media #{$screen-md} {
+    .title-section {
+        font-size: 64px;
+        line-height: 80px;
+    }
+}
+@media #{$screen-sm} {
+    .title-section {
+        font-size: 40px;
+        line-height: 56px;
+    }
+}
+@media #{$screen-xs} {
+    .title-section {
+        font-size: 38px;
+        line-height: 48px;
     }
 }
