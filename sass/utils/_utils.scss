@@ -88,3 +88,25 @@
         line-height: 48px;
     }
 }
+
+.success {
+    background-color: $color-success!important;
+    border-radius: 8px;
+    padding: $space-md $space-lg;
+    max-width: -webkit-fill-available;
+    max-width: -moz-available;
+
+    & span {
+        display: block;
+        font-size: 22px!important;
+        line-height: 28px;
+        color: #fff!important;
+        font-weight: $font-weight-semibold;
+    }
+}
+
+@media #{$screen-xs} {
+    .success {
+        padding: $space-sm $space-md;
+    }
+}

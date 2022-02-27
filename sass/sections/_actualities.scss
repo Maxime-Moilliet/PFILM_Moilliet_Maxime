@@ -1,6 +1,13 @@
 .actualities {
     padding: $space-4xl 0;
 
+    &__title {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: $space-4xl;
+    }
+
     &__card {
         width: 310px;
 
@@ -90,10 +97,18 @@
         .swiper-actuality-button-next button {
             display: none;
         }
+
+        &__title {
+            margin-bottom: $space-2xl;
+        }
     }
 }
 @media #{$screen-sm} {
     .actualities {
         padding: 40px 0;
+
+        &__title {
+            margin-bottom: $space-xl;
+        }
     }
 }

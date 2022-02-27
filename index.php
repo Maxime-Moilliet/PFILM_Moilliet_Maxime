@@ -79,7 +79,7 @@
         </section>
 
         <section class="actualities">
-            <h2 class="movies__title title-section">Suivez l'actualités</h2>
+            <h2 class="actualities__title title-section">Suivez l'actualités</h2>
 
             <div class="swiper js-swiper-actualities">
                 <div class="swiper-wrapper">
@@ -136,12 +136,34 @@
                 </div>
             </div>
         </section>
-
     </main>
+
+    <section class="contact">
+        <h2 class="contact__title title-section">Contactez-nous</h2>
+        <form class="contact__form" id="js-form-contact">
+            <div>
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom...">
+                <span class="js-error-name"></span>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Votre email...">
+                <span class="js-error-email"></span>
+            </div>
+            <div>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="" rows="11" placeholder="Votre message..."></textarea>
+                <span class="js-error-message"></span>
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
 
     <script src="./js/slider-days.js" type="module" defer></script>
     <script src="./js/slider-movies.js" type="module" defer></script>
     <script src="./js/slider-actualities.js" type="module" defer></script>
     <script src="./js/select-movies.js" type="module" defer></script>
+    <script src="./js/contact-validation.js" type="module" defer></script>
 </body>
 </html>
