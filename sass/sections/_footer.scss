@@ -1,0 +1,40 @@
+.footer {
+    display: flex;
+    background-color: $color-black;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & ul {
+        display: flex;
+        gap: $space-sm;
+        background-color: transparent;
+        
+        & li {
+            background-color: transparent;
+
+            & a i{
+                background-color: $color-black;
+                color: #fff;
+                font-size: 32px;
+                margin: $space-lg 0;
+                transition: opacity .3s;
+
+                &:hover {
+                   opacity: .5;
+                }
+            }
+        } 
+    }
+
+    &__legal {
+        color: #fff!important;
+        background-color: transparent;
+        font-size: 20px;
+        font-weight: $font-weight-medium;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -159,6 +159,24 @@
             <button type="submit">Envoyer</button>
         </form>
     </section>
+    
+    <footer class="footer container">
+        <ul>
+            <li>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+        </ul>
+        <a class="footer__legal" href="#">Mentions légales</a>
+    </footer>
 
     <script src="./js/slider-days.js" type="module" defer></script>
     <script src="./js/slider-movies.js" type="module" defer></script>
