@@ -12,16 +12,13 @@
     &__content {
         color: $color-light-gray;
     }
-}
 
-@media #{$screen-2xl} {
-    .about {
-
-        img {
-            width: 45%;
-        }
+    img {
+        width: 45%;
+        height: 100%;
     }
 }
+
 @media #{$screen-xl} {
     .about {
         padding: 140px 0px 70px 0;

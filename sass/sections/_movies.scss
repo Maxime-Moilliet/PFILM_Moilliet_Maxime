@@ -83,6 +83,8 @@
         }
 
         & img {
+            width: 310px;
+            height: 420px;
             position: relative;
             z-index: 1;
             border-radius: 8px 8px 0px 0px;
@@ -167,7 +169,7 @@
 
 @media #{$screen-xl} {
     .movies {
-        padding: 70px 0px 70px 0;
+        padding: 70px 0px;
     }
 }
 @media #{$screen-lg} {
@@ -184,7 +186,7 @@
 }
 @media #{$screen-md} {
     .movies {
-        padding: 60px 0px 60px 0;
+        padding: 60px 0px;
 
         &__title {
             margin-bottom: $space-2xl;
@@ -202,7 +204,7 @@
 }
 @media #{$screen-sm} {
     .movies {
-        padding: 40px 0px 40px 0;
+        padding: 40px 0px;
 
         &__title {
             margin-bottom: $space-xl;

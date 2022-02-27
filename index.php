@@ -78,10 +78,70 @@
             </div>
         </section>
 
+        <section class="actualities">
+            <h2 class="movies__title title-section">Suivez l'actualités</h2>
+
+            <div class="swiper js-swiper-actualities">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide actualities__card">
+                        <img src="./assets/actuality.png" alt="">
+                        <span>il y a 12h</span>
+                        <h3>Découvrez l'une des légendes du cinéma</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus enim consequatur, eum consectetur laborum perferendis?
+                        </p>    
+                    </div>
+                    <div class="swiper-slide actualities__card">
+                        <img src="./assets/actuality.png" alt="">
+                        <span>il y a 12h</span>
+                        <h3>Découvrez l'une des légendes du cinéma</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus enim consequatur, eum consectetur laborum perferendis?
+                        </p>    
+                    </div>
+                    <div class="swiper-slide actualities__card">
+                        <img src="./assets/actuality.png" alt="">
+                        <span>il y a 12h</span>
+                        <h3>Découvrez l'une des légendes du cinéma</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus enim consequatur, eum consectetur laborum perferendis?
+                        </p>    
+                    </div>
+                    <div class="swiper-slide actualities__card">
+                        <img src="./assets/actuality.png" alt="">
+                        <span>il y a 12h</span>
+                        <h3>Découvrez l'une des légendes du cinéma</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus enim consequatur, eum consectetur laborum perferendis?
+                        </p>    
+                    </div>
+                    <div class="swiper-slide actualities__card">
+                        <img src="./assets/actuality.png" alt="">
+                        <span>il y a 12h</span>
+                        <h3>Découvrez l'une des légendes du cinéma</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus enim consequatur, eum consectetur laborum perferendis?
+                        </p>    
+                    </div>
+                </div>
+                <div class="swiper-actuality-button-next">
+                    <button>
+                        <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
+                <div class="swiper-actuality-button-prev">
+                    <button>
+                        <i class="fas fa-angle-left"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <script src="./js/slider-days.js" type="module" defer></script>
     <script src="./js/slider-movies.js" type="module" defer></script>
+    <script src="./js/slider-actualities.js" type="module" defer></script>
     <script src="./js/select-movies.js" type="module" defer></script>
 </body>
 </html>

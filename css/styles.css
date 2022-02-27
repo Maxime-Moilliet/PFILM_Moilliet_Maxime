@@ -793,6 +793,7 @@ a, a:visited {
   color: #fff;
   font-size: 28px;
   font-weight: 700;
+  background-color: #040404;
 }
 
 @media only screen and (max-width: 1500px) {
@@ -932,12 +933,11 @@ a, a:visited {
 .about__content {
   color: #A8A8A8;
 }
-
-@media only screen and (max-width: 1700px) {
-  .about img {
-    width: 45%;
-  }
+.about img {
+  width: 45%;
+  height: 100%;
 }
+
 @media only screen and (max-width: 1500px) {
   .about {
     padding: 140px 0px 70px 0;
@@ -1040,6 +1040,8 @@ a, a:visited {
   margin-top: 24px;
 }
 .movies__card img {
+  width: 310px;
+  height: 420px;
   position: relative;
   z-index: 1;
   border-radius: 8px 8px 0px 0px;
@@ -1116,7 +1118,7 @@ a, a:visited {
 
 @media only screen and (max-width: 1500px) {
   .movies {
-    padding: 70px 0px 70px 0;
+    padding: 70px 0px;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -1130,7 +1132,7 @@ a, a:visited {
 }
 @media only screen and (max-width: 992px) {
   .movies {
-    padding: 60px 0px 60px 0;
+    padding: 60px 0px;
   }
   .movies__title {
     margin-bottom: 64px;
@@ -1145,7 +1147,7 @@ a, a:visited {
 }
 @media only screen and (max-width: 768px) {
   .movies {
-    padding: 40px 0px 40px 0;
+    padding: 40px 0px;
   }
   .movies__title {
     margin-bottom: 48px;
@@ -1165,6 +1167,95 @@ a, a:visited {
   }
   100% {
     opacity: 1;
+  }
+}
+.actualities {
+  padding: 80px 0;
+}
+.actualities__card {
+  width: 310px;
+}
+.actualities__card img {
+  width: 310px;
+  height: 190px;
+}
+.actualities__card h3 {
+  font-size: 20px;
+  line-height: 26px;
+  color: #fff;
+  font-weight: 600;
+}
+.actualities__card p {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #A8A8A8;
+}
+.actualities .js-swiper-actualities:hover .swiper-actuality-button-prev button,
+.actualities .js-swiper-actualities:hover .swiper-actuality-button-next button {
+  opacity: 1;
+}
+.actualities .swiper-actuality-button-prev[aria-disabled=true] button,
+.actualities .swiper-actuality-button-next[aria-disabled=true] button {
+  display: none;
+}
+.actualities .swiper-actuality-button-prev button,
+.actualities .swiper-actuality-button-next button {
+  opacity: 0;
+  position: absolute;
+  top: 35%;
+  background-color: rgba(14, 19, 26, 0.8);
+  border-radius: 50%;
+  padding: 16px 24px;
+  z-index: 2;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.actualities .swiper-actuality-button-prev button i,
+.actualities .swiper-actuality-button-next button i {
+  transform: translateX(-2px);
+  background-color: transparent;
+  font-size: 35px;
+  color: #fff;
+}
+.actualities .swiper-actuality-button-prev button:hover,
+.actualities .swiper-actuality-button-next button:hover {
+  background-color: #0e131a;
+}
+.actualities .swiper-actuality-button-prev button {
+  left: 24px;
+}
+.actualities .swiper-actuality-button-prev button i {
+  transform: translateX(-1px);
+}
+.actualities .swiper-actuality-button-next button {
+  right: 24px;
+}
+.actualities .swiper-actuality-button-next button i {
+  transform: translateX(1px);
+}
+
+@media only screen and (max-width: 1500px) {
+  .actualities {
+    padding: 70px 0;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .actualities {
+    padding: 60px 0;
+  }
+  .actualities .swiper-actuality-button-prev button,
+.actualities .swiper-actuality-button-next button {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .actualities {
+    padding: 40px 0;
   }
 }
 
