@@ -1,0 +1,31 @@
+.text-content {
+    font-size: 22px;
+    line-height: 40px;
+    font-weight: $font-weight-semibold;
+}
+
+@media #{$screen-lg} {
+    .text-content {
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+@media #{$screen-md} {
+    .text-content {
+        font-size: 19px;
+        line-height: 32px;
+        font-weight: $font-weight-medium;
+    }
+}
+@media #{$screen-sm} {
+    .text-content {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+@media #{$screen-xs} {
+    .text-content {
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
