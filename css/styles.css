@@ -53,4 +53,46 @@ a, a:visited {
   color: inherit;
 }
 
+.header {
+  background-color: #040404;
+  padding: 32px 200px;
+}
+.header a, .header a:visited {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 1500px) {
+  .header {
+    padding: 32px 160px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .header {
+    padding: 32px 100px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .header {
+    padding: 32px 64px;
+  }
+  .header a, .header a:visited {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 32px 32px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .header {
+    padding: 24px 16px;
+  }
+  .header a, .header a:visited {
+    font-size: 22px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,43 @@
+.header {
+    background-color: $color-black;
+    padding: $space-md 200px;
+
+    a, a:visited {
+        color: #fff;
+        font-size: 28px;
+        font-weight: $font-weight-extrabold;
+    }
+}
+
+@media #{$screen-xl} {
+    .header {
+        padding: $space-md 160px;
+    }
+}
+@media #{$screen-lg} {
+    .header {
+        padding: $space-md 100px;
+    }
+}
+@media #{$screen-md} {
+    .header {
+        padding: $space-md $space-2xl;
+
+        a, a:visited {
+            font-size: 24px;
+        }
+    }
+}
+@media #{$screen-sm} {
+    .header {
+        padding: $space-md $space-md;
+    }
+}
+@media #{$screen-xs} {
+    .header {
+        padding: $space-sm $space-xs;
+        a, a:visited {
+            font-size: 22px;
+        }
+    }
+}
