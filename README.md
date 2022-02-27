@@ -1,6 +1,6 @@
 # P3 Openclassrooms - festival de films
 
-Créer un site Web pour le festival de films en HTML, CSS, JS.
+Create a website for the film festival in HTML, CSS, JS.
 
 ## Dependencies
 
