@@ -1,6 +1,9 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
+// Libs
+@import './libs/swiper';
+
 // Utils
 @import './utils/variables';
 @import './utils/reset';
@@ -10,3 +13,4 @@
 @import './sections/header';
 @import './sections/banner';
 @import './sections/about';
+@import './sections/movies';

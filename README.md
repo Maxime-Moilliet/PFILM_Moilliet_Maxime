@@ -3,12 +3,17 @@
 Create a website for the film festival in HTML, CSS, JS.
 
 ## Dependencies 
-    - sass (dart-sass)
+    - php (JS - import type module),
+    - sass (dart-sass),
+    - swiper js (slider)
 
 ## Clone this project
 
 ```bash
 git clone
+``` 
+```bash
+cd ./PFILM_Moilliet_Maxime
 ``` 
 
 ## Start dart-sass
@@ -25,4 +30,6 @@ for dev :
 
 ## Start project
 
-Open index.html file in your browser.
+```bash
+php -s localhost:8000
+``` 
