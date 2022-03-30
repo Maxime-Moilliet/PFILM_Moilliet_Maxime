@@ -1,209 +1,106 @@
 .contact {
-    padding: 140px 0;
-    background-color: $color-background-primary;
-    
-    &__title {
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
-        margin-bottom: $space-4xl;
-        background-color: transparent;
+  padding: 140px 0;
+  background-color: $color-black-300;
+
+  &__title {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: $space-4xl;
+    background-color: transparent;
+  }
+
+  &__form {
+    margin: 0px auto;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+    background-color: transparent;
+
+    & > * + * {
+      margin-top: $space-md;
     }
-    
-    &__form {
-        margin: 0px auto;
-        max-width: 1200px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: auto;
-        background-color: transparent;
-        
-        & > * + * {
-            margin-top: $space-lg;
-        }
-        
-        & div {
-            width: 100%;
-            background-color: transparent;
-            
-            & label {
-                background-color: $color-background-primary;
-                display: block;
-                font-size: 28px;
-                font-weight: $font-weight-bold;
-                color: #fff;
-                padding-bottom: $space-xs;
-            }
-            
-            & input {
-                background-color: $color-background;
-                font-size: 24px;
-                color: #fff;
-                font-weight: 500;
-                padding: $space-xs $space-sm;
-                width: -webkit-fill-available;
-                width: -moz-available;
-                border-radius: 8px;
-                border: 1px solid $color-light-gray;
-                transition: all .3s;
+    & button {
+      background-color: $color-blue-100;
+      border-radius: 8px;
+      font-size: 26px;
+      font-weight: $font-weight-bold;
+      color: #fff;
+      border: none;
+      padding: $space-xs 0;
+      transition: opacity 0.3s;
+      cursor: pointer;
 
-                &.error {
-                    border-color: $color-error;
-
-                    &:focus {
-                        border-color: transparent;
-                        outline: 1px solid $color-error!important;
-                    }
-                }
-
-                &::placeholder {
-                    font-weight: $font-weight-medium;
-                    font-size: 24px;
-                    font-family: $font-family, sans-serif;
-                }
-            }
-
-            & textarea {
-                background-color: $color-background;
-                width: -webkit-fill-available;
-                width: -moz-available;
-                border-radius: 8px;
-                border: 1px solid $color-light-gray;
-                padding: $space-xs $space-sm;
-                font-size: 24px;
-                color: #fff;
-                font-weight: 500;
-                margin: 0;
-                resize: none;
-                transition: border-color .3s;
-                font-family: $font-family;
-
-                &.error {
-                    border-color: $color-error;
-                    
-                    &:focus {
-                        border-color: transparent;
-                        outline: 1px solid $color-error!important;
-                    }
-                }
-
-                &::placeholder {
-                    font-family: $font-family;
-                    font-size: 24px;
-                    font-weight: $font-weight-medium;
-                }
-
-                &::-webkit-scrollbar {
-                    width: 14px;     
-                    border-radius: 3px;         
-                  }
-                &::-webkit-scrollbar-track { 
-                    background-color: $color-background-secondary;
-                }
-                &::-webkit-scrollbar-thumb {
-                    cursor: pointer;
-                    background-color: #fff;   
-                    border-radius: 20px;       
-                    border: 3px solid $color-background; 
-                }
-            }
-
-            & span {
-                display: block;
-                margin-top: $space-xxs;
-                font-size: 18px;
-                background-color: transparent;
-                color: $color-error;
-            }
-
-        }
-        & button {
-            background-color: $color-blue;
-            border-radius: 8px;
-            font-size: 26px;
-            font-weight: $font-weight-bold;
-            color: #fff;
-            border: none;
-            padding: $space-xs 0;
-            transition: opacity .3s;
-            cursor: pointer;
-
-            &:hover {
-                opacity: .7;
-            }
-        }
-
+      &:hover {
+        opacity: 0.7;
+      }
     }
+  }
 }
 
 @media #{$screen-xl} {
-    .contact {
-        padding: 120px 0;
-
-        &__form {
-            margin: 0px 160px;
-        }
-    }
+  .contact {
+    padding: 120px 0;
+  }
 }
 @media #{$screen-lg} {
-    .contact {
-        &__form {
-            margin: 0px 100px;
-        }
+  .contact {
+    &__form {
+      margin: 0px 100px;
     }
+  }
 }
 @media #{$screen-md} {
-    .contact {
-        padding: 90px 0;
+  .contact {
+    padding: 90px 0;
 
-        & > * + * {
-            margin-top: $space-md;
-        }
-
-        &__form {
-            margin: 0px $space-2xl;
-        }
-        & button {
-            font-size: 24px;
-        }
+    &__title {
+      margin-bottom: $space-lg;
     }
+
+    &__form {
+      margin: 0px $space-2xl;
+      & > * + * {
+        margin-top: $space-sm;
+      }
+    }
+    & button {
+      font-size: 24px;
+    }
+  }
 }
+
 @media #{$screen-sm} {
-    .contact {
-        padding: 60px 0;
+  .contact {
+    padding: 60px 0;
 
-        &__form {
-            margin: 0px $space-md;
+    &__form {
+      margin: 0px $space-md;
 
-            & div {
-
-                & label {
-                    font-size: 25px;
-                }
-
-                & input {
-                    font-size: 22px;
-
-                    &::placeholder {
-                        font-size: 22px;
-                    }
-                }
-    
-                & textarea {
-                    font-size: 22px;
-
-                    &::placeholder {
-                        font-size: 22px;
-                    }
-                }
-
-            }
-
-            & button {
-                font-size: 22px;
-                padding: 10px 0;
-            }
-        }
+      & button {
+        font-size: 22px;
+        padding: 10px 0;
+      }
     }
+  }
+}
+@media #{$screen-xs} {
+  .contact {
+    padding: 50px 0;
+
+    &__form {
+      margin: 0px $space-xs;
+
+      & > * + * {
+        margin-top: $space-xs;
+      }
+
+      & button {
+        font-size: 20px;
+        padding: 10px 0;
+      }
+    }
+  }
 }

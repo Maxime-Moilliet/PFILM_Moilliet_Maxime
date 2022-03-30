@@ -31,5 +31,5 @@ for dev :
 ## Start project
 
 ```bash
-php -s localhost:8000
+php -S localhost:8000
 ``` 

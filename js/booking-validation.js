@@ -2,7 +2,7 @@
  * Validation contact form
  * @property {HTMLElementForm} form
  */
-class ContactValidation {
+class BookingValidation {
   constructor() {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.createOjectWithValue = this.createOjectWithValue.bind(this);
@@ -10,7 +10,7 @@ class ContactValidation {
     this.renderErrors = this.renderErrors.bind(this);
     this.renderMessageSuccess = this.renderMessageSuccess.bind(this);
 
-    this.form = document.querySelector("#js-form-contact");
+    this.form = document.querySelector("#js-form-booking");
 
     if (this.form) {
       this.form.addEventListener("submit", this.handleSubmit);
@@ -28,9 +28,11 @@ class ContactValidation {
     this.renderErrors(errors);
     if (Object.keys(errors).length === 0) {
       this.renderMessageSuccess();
-      document.querySelector("[name=name]").value = "";
-      document.querySelector("[name=email]").value = "";
-      document.querySelector("[name=message]").value = "";
+      console.log(values);
+      document.querySelector("[name=emailBooking]").value = "";
+      document.querySelector("[name=nb_places]").value = "1";
+      document.querySelector("[name=booking]:checked").value = "";
+      document.querySelector("[name=idMovie]").value = "";
     }
   }
 
@@ -40,9 +42,10 @@ class ContactValidation {
    */
   createOjectWithValue() {
     return {
-      name: document.querySelector("[name=name]").value,
-      email: document.querySelector("[name=email]").value,
-      message: document.querySelector("[name=message]").value,
+      email: document.querySelector("[name=emailBooking]").value,
+      nb_places: document.querySelector("[name=nb_places]").value,
+      booking: document.querySelector("[name=booking]:checked").value,
+      id_movie: document.querySelector("[name=idMovie]").value,
     };
   }
 
@@ -52,23 +55,20 @@ class ContactValidation {
    * @returns {Object} errors
    */
   validation(values) {
+    const regExpNbPlaces = /^[1-9]{1}$/;
     const regExpMail =
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let errors = {};
-    if (values.message.trim() === "") {
-      errors.message = "Veuillez écrire un message.";
-    } else if (values.message.trim().length <= 2) {
-      errors.message = "Veuillez renseigner au moins 3 caractères.";
-    }
-    if (values.name.trim() === "") {
-      errors.name = "Veuillez renseigner votre nom.";
-    } else if (values.name.trim().length <= 2) {
-      errors.name = "Veuillez renseigner au moins 3 caractères.";
-    }
     if (values.email.trim() === "") {
       errors.email = "Veuillez renseigner votre adresse mail.";
     } else if (!regExpMail.test(values.email)) {
       errors.email = "Veuillez renseigner une adresse mail valide.";
+    }
+    if (!regExpNbPlaces.test(values.nb_places)) {
+      errors.nb_places = "Veuillez saisir un nombre compris entre 1 et 9.";
+    }
+    if (!values.id_movie) {
+      console.log("No id movie");
     }
     return errors;
   }
@@ -78,20 +78,11 @@ class ContactValidation {
    * @param {Oject} errors
    */
   renderErrors(errors) {
-    const nameSpan = document.querySelector(".js-error-name");
-    const nameInput = nameSpan.parentNode.querySelector("input");
-    const emailSpan = document.querySelector(".js-error-email");
+    const emailSpan = document.querySelector(".js-error-emailBooking");
     const emailInput = emailSpan.parentNode.querySelector("input");
-    const messageSpan = document.querySelector(".js-error-message");
-    const messageInput = messageSpan.parentNode.querySelector("textarea");
+    const nbPlacesSpan = document.querySelector(".js-error-nb_places");
+    const nbPlacesInput = nbPlacesSpan.parentNode.querySelector("input");
 
-    if (errors.name) {
-      nameInput.setAttribute("class", "error");
-      nameSpan.innerHTML = errors.name;
-    } else {
-      nameInput.removeAttribute("class");
-      nameSpan.innerHTML = "";
-    }
     if (errors.email) {
       emailInput.setAttribute("class", "error");
       emailSpan.innerHTML = errors.email;
@@ -99,12 +90,12 @@ class ContactValidation {
       emailInput.removeAttribute("class");
       emailSpan.innerHTML = "";
     }
-    if (errors.message) {
-      messageInput.setAttribute("class", "error");
-      messageSpan.innerHTML = errors.message;
+    if (errors.nb_places) {
+      nbPlacesInput.setAttribute("class", "error");
+      nbPlacesSpan.innerHTML = errors.nb_places;
     } else {
-      messageInput.removeAttribute("class");
-      messageSpan.innerHTML = "";
+      nbPlacesInput.removeAttribute("class");
+      nbPlacesSpan.innerHTML = "";
     }
   }
 
@@ -120,4 +111,4 @@ class ContactValidation {
   }
 }
 
-new ContactValidation();
+new BookingValidation();

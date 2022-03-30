@@ -1,44 +1,47 @@
 .header {
-    background-color: $color-black;
-    padding: $space-md 200px;
+  background-color: $color-black-100;
+  padding: $space-md 200px;
 
-    a, a:visited {
-        color: #fff;
-        font-size: 28px;
-        font-weight: $font-weight-extrabold;
-        background-color: $color-black;
-    }
+  a,
+  a:visited {
+    color: #fff;
+    font-size: 28px;
+    font-weight: $font-weight-extrabold;
+    background-color: $color-black-100;
+  }
 }
 
 @media #{$screen-xl} {
-    .header {
-        padding: $space-md 160px;
-    }
+  .header {
+    padding: $space-md 160px;
+  }
 }
 @media #{$screen-lg} {
-    .header {
-        padding: $space-md 100px;
-    }
+  .header {
+    padding: $space-md 100px;
+  }
 }
 @media #{$screen-md} {
-    .header {
-        padding: $space-md $space-2xl;
+  .header {
+    padding: $space-md $space-2xl;
 
-        a, a:visited {
-            font-size: 24px;
-        }
+    a,
+    a:visited {
+      font-size: 24px;
     }
+  }
 }
 @media #{$screen-sm} {
-    .header {
-        padding: $space-md $space-md;
-    }
+  .header {
+    padding: $space-md $space-md;
+  }
 }
 @media #{$screen-xs} {
-    .header {
-        padding: $space-sm $space-xs;
-        a, a:visited {
-            font-size: 22px;
-        }
+  .header {
+    padding: $space-sm $space-xs;
+    a,
+    a:visited {
+      font-size: 22px;
     }
+  }
 }

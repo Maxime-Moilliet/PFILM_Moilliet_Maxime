@@ -1,19 +1,21 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 
 // Libs
-@import './libs/swiper';
+@import "./libs/swiper";
 
 // Utils
-@import './utils/variables';
-@import './utils/reset';
-@import './utils/utils';
+@import "./utils/variables";
+@import "./utils/reset";
+@import "./utils/utils";
+@import "./utils/texts";
+@import "./utils/forms";
 
 // Sections
-@import './sections/header';
-@import './sections/banner';
-@import './sections/about';
-@import './sections/movies';
-@import './sections/actualities';
-@import './sections/contact';
-@import './sections/footer';
+@import "./sections/header";
+@import "./sections/banner";
+@import "./sections/about";
+@import "./sections/movies";
+@import "./sections/actualities";
+@import "./sections/contact";
+@import "./sections/footer";

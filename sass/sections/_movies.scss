@@ -1,230 +1,490 @@
 .movies {
-    padding: $space-4xl 0px;
+  padding: $space-4xl 0;
+  margin: 0 auto;
+
+  &__title {
+    max-width: 1200px;
     margin: 0 auto;
-    
-    &__title {
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
-        margin-bottom: $space-4xl;
+    text-align: center;
+    margin-bottom: $space-4xl;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    max-width: max-content;
+    position: relative;
+    min-height: auto;
+  }
+
+  &__day {
+    user-select: none;
+    cursor: pointer;
+    background-color: $color-black-300;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+    padding: $space-xs $space-sm;
+    width: auto !important;
+    border: 1px solid $color-gray-100;
+    border-radius: 8px;
+    font-size: 22px;
+    color: #fff;
+    font-weight: $font-weight-medium;
+    transition: all 0.3s;
+
+    &:hover,
+    &.active {
+      background-color: $color-blue-100;
+      border-color: $color-blue-100;
+    }
+  }
+
+  & .swiper-slide {
+    margin-top: $space-2xl;
+  }
+
+  &__card {
+    transition: opacity 0.3s;
+    cursor: pointer;
+    animation-name: appear;
+    animation-duration: 2s;
+
+    &:hover {
+      opacity: 0.5;
     }
 
-    &__wrapper {
-       margin: 0 auto;
-       max-width: max-content;
-       position: relative;
-       min-height: auto;
-    }
+    & div {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-top: $space-xs;
+      max-width: auto;
 
-    &__day {
-        user-select: none;
-        cursor: pointer;
-        background-color: $color-background-primary;
-        white-space: nowrap;
-        display: block;
-        text-align: center;
-        padding: $space-xs $space-sm;
-        width: auto!important;
-        border: 1px solid $color-light-gray;
-        border-radius: 8px;
+      & h3 {
         font-size: 22px;
+        line-height: 30px;
         color: #fff;
+        font-weight: $font-weight-semibold;
+        max-width: 200px;
+      }
+
+      & span {
+        color: $color-gray-100;
+        font-size: 18px;
         font-weight: $font-weight-medium;
-        transition: all .3s;
-
-        &:hover, &.active {
-            background-color: $color-blue;
-            border-color: $color-blue;
-        }
+        margin-top: 6px;
+      }
     }
 
-    & .swiper-slide {
-        margin-top: $space-2xl;
+    & span {
+      display: block;
+      color: $color-gray-100;
+      font-size: 18px;
+      margin-top: $space-sm;
     }
 
-    &__card {
-        transition: opacity .3s;
-        cursor: pointer;
-        animation-name: appear;
-        animation-duration: 2s;
-
-        &:hover {
-            opacity: .5;
-        }
-
-        & div {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            margin-top: $space-xs;
-            max-width: auto;
-
-            & h3 {
-                font-size: 22px;
-                line-height: 30px;
-                color: #fff;
-                font-weight: $font-weight-semibold;
-                max-width: 200px;
-            }
-
-            & span {
-                color: $color-light-gray;
-                font-size: 18px;
-                font-weight: $font-weight-medium;
-                margin-top: 6px;
-            }
-        }
-
-        & span {
-            display: block;
-            color: $color-light-gray;
-            font-size: 18px;
-            margin-top: $space-sm;
-        }
-
-        & img {
-            width: 310px;
-            height: 420px;
-            position: relative;
-            z-index: 1;
-            border-radius: 8px 8px 0px 0px;
-        }
+    & img {
+      width: 280px;
+      height: 420px;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+      border-radius: 8px 8px 0px 0px;
     }
-    
-    &__wrapper:hover {
-        .swiper-movie-button-prev button,
-        .swiper-movie-button-next button {
-            opacity: 1;
-        }
-    }
+  }
 
-    .swiper-movie-button-prev[aria-disabled=true] button,
-    .swiper-movie-button-next[aria-disabled=true] button {
-        display: none;
-    }
+  &__wrapper:hover {
     .swiper-movie-button-prev button,
     .swiper-movie-button-next button {
-        opacity: 0;
-        position: absolute;
-        top: 45%;
-        background-color: rgba($color: $color-background-primary, $alpha: .8);
-        border-radius: 50%;
-        padding: $space-sm $space-md;
-        z-index: 2;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all .3s;
-        cursor: pointer;
-        
-        & i {
-            transform: translateX(-2px);
-            background-color: transparent;
-            font-size: 40px;
-            color: #fff;
-        }
-
-        &:hover {
-            background-color: rgba($color: $color-background-primary, $alpha: 1);
-        }
+      opacity: 1;
     }
+  }
 
-    .swiper-movie-button-prev button {
-        left: $space-sm;
-        & i {
-            transform: translateX(-2px);
-        }
-    }
-    .swiper-movie-button-next button {
-        right: $space-sm;
-        & i {
-            transform: translateX(2px);
-        }
+  .swiper-movie-button-prev[aria-disabled="true"] button,
+  .swiper-movie-button-next[aria-disabled="true"] button {
+    display: none;
+  }
+  .swiper-movie-button-prev button,
+  .swiper-movie-button-next button {
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    background-color: rgba($color: $color-black-300, $alpha: 0.8);
+    border-radius: 50%;
+    padding: $space-sm $space-md;
+    z-index: 2;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    & i {
+      transform: translateX(-2px);
+      background-color: transparent;
+      font-size: 40px;
+      color: #fff;
     }
 
-    &__card-fake {
-        border-radius: 8px;
-        width: 310px;
-        background: $color-background-secondary;
-        color:  $color-background-secondary!important;
-        position: relative;
-        overflow: hidden;
-        height: 540px;
+    &:hover {
+      background-color: rgba($color: $color-black-300, $alpha: 1);
     }
-    &__card-fake::before {
-        content: "";
-        position: absolute;
-        left: 0%;
-        top: 0;
-        height: 100%;
-        width: 250px;
-        background: linear-gradient(to right, $color-background-secondary 25%,  #3d3d3d 50%, $color-background-secondary 100%);
-        animation-name: gradient-animation;
-        animation-duration: 1.5s;
-        animation-iteration-count: infinite;
-        filter: blur(5px);
+  }
+
+  .swiper-movie-button-prev button {
+    left: $space-sm;
+    & i {
+      transform: translateX(-2px);
     }
+  }
+  .swiper-movie-button-next button {
+    right: $space-sm;
+    & i {
+      transform: translateX(2px);
+    }
+  }
+
+  &__card-fake {
+    border-radius: 8px;
+    width: 280px;
+    background: $color-black-400;
+    color: $color-black-400 !important;
+    position: relative;
+    overflow: hidden;
+    height: 540px;
+  }
+  &__card-fake::before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background: linear-gradient(
+      to right,
+      $color-black-400 25%,
+      #3d3d3d 50%,
+      $color-black-400 100%
+    );
+    animation-name: gradient-animation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    filter: blur(5px);
+  }
 }
 
 @media #{$screen-xl} {
-    .movies {
-        padding: 70px 0px;
-    }
+  .movies {
+    padding: 70px 0;
+  }
 }
 @media #{$screen-lg} {
-    .movies {
-        &__wrapper {
-            display: block;
-        }
-
-        &__day {
-            padding: $space-xxs $space-xs;
-            font-size: 20px;
-        }
+  .movies {
+    &__wrapper {
+      display: block;
     }
+
+    &__day {
+      padding: $space-xxs $space-xs;
+      font-size: 20px;
+    }
+  }
 }
 @media #{$screen-md} {
-    .movies {
-        padding: 60px 0px;
+  .movies {
+    padding: 60px 0;
 
-        &__title {
-            margin-bottom: $space-2xl;
-        }
-
-        & .swiper-slide {
-            margin-top: $space-xl;
-        }
-
-        .swiper-movie-button-prev button,
-        .swiper-movie-button-next button {
-            display: none;
-        }
+    &__title {
+      margin-bottom: $space-2xl;
     }
+
+    & .swiper-slide {
+      margin-top: $space-xl;
+    }
+
+    .swiper-movie-button-prev button,
+    .swiper-movie-button-next button {
+      display: none;
+    }
+  }
 }
 @media #{$screen-sm} {
-    .movies {
-        padding: 40px 0px;
+  .movies {
+    padding: 40px 0;
 
-        &__title {
-            margin-bottom: $space-xl;
-        }
+    &__title {
+      margin-bottom: $space-xxs;
     }
+  }
 }
 
 @keyframes gradient-animation {
-    from {
-      left: -250px;
-    }
-    to {
-      left: 100%;
-    }
+  from {
+    left: -250px;
+  }
+  to {
+    left: 100%;
+  }
 }
 @keyframes appear {
-    0% {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modal-movie {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  opacity: 1;
+  background-color: $color-black-500;
+  width: 50%;
+
+  & div {
+    background-color: $color-black-500;
+
+    & img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: $space-md $space-lg;
+
+    & div {
+      display: flex;
+      margin-bottom: $space-md;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      & h3 {
+        background-color: transparent;
+        font-size: 34px;
+        color: #fff;
+        font-weight: $font-weight-bold;
+
+        span {
+          background-color: transparent;
+          color: $color-gray-100;
+          font-size: 20px;
+          margin-left: $space-2xs;
+        }
+      }
+
+      & span {
+        background-color: transparent;
+        color: $color-gray-100;
+        font-size: 22px;
+        font-weight: $font-weight-semibold;
+        margin-top: 6px;
+
+        i {
+          background-color: transparent;
+        }
+      }
+    }
+
+    & p {
+      background-color: transparent;
+      color: $color-gray-100;
+      line-height: 24px;
+      font-weight: $font-weight-medium;
+
+      span {
+        background-color: transparent;
+        color: #fff;
+        font-weight: $font-weight-semibold;
+      }
+    }
+
+    & form {
+      background-color: transparent;
+      margin-top: $space-lg;
+
+      & h4 {
+        font-size: 40px;
+        color: #fff;
+        background-color: transparent !important;
+        font-weight: $font-weight-semibold;
+        margin-bottom: $space-lg;
+      }
+
+      & button {
+        margin-top: 0px;
+        background-color: $color-blue-100;
+        border-radius: 8px;
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        color: #fff;
+        border: none;
+        padding: $space-xs 0;
+        transition: opacity 0.3s;
+        cursor: pointer;
+        width: 100%;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    & form > * + * {
+      margin-top: $space-md;
+      margin-bottom: 0;
+    }
+  }
+
+  .js-modal-close {
+    position: relative;
+    padding: $space-md;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    left: $space-md;
+    top: $space-md;
+    margin-bottom: $space-lg;
+    background-color: transparent;
+    border: none;
+    transition: opacity 0.3s;
+
+    & i {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -53%);
+      content: "\f00d";
+      background-color: rgba($color: $color-black-200, $alpha: 0.9);
+      border-radius: 50%;
+      padding: 20px $space-sm 18px $space-sm;
+      font-size: 32px;
+      color: #fff;
+    }
+
+    &:hover,
+    &:hover:after {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      border-radius: 50%;
+      outline: 4px solid $color-black-300;
+    }
+  }
+
+  &[aria-modal="false"] {
+    animation: fadeOut 0.5s;
+    animation-fill-mode: both;
+  }
+  &[aria-modal="true"] {
+    animation: fadeIn 0.5s;
+    animation-fill-mode: both;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes fadeOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media #{$screen-lg} {
+  .modal-movie {
+    width: 100%;
+    right: 0;
+  }
+
+  @keyframes fadeIn {
+    from {
       opacity: 0;
     }
-    100% {
+    to {
       opacity: 1;
     }
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+@media #{$screen-sm} {
+  .modal-movie {
+    &__content {
+      & div {
+        display: block;
+        & h3 {
+          font-size: 36px;
+          line-height: 30px;
+          margin-bottom: $space-sm;
+
+          & span {
+            margin-left: 0;
+            padding: $space-xs 0;
+          }
+        }
+        & span {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media #{$screen-xs} {
+  .modal-movie {
+    &__content {
+      & div {
+        display: block;
+        & h3 {
+          font-size: 20px;
+          line-height: 30px;
+          margin-bottom: $space-sm;
+
+          & span {
+            margin-left: 0;
+            padding: $space-xs 0;
+          }
+        }
+        & span {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.js-wrapper-content.active {
+  animation: maskBody 0.2s;
+  animation-fill-mode: both;
+}
+
+@keyframes maskBody {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
 }

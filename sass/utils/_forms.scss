@@ -1,0 +1,208 @@
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+
+  & label {
+    background-color: $color-black-300;
+    display: block;
+    font-size: 24px;
+    font-weight: $font-weight-bold;
+    color: #fff;
+    padding-bottom: $space-xs;
+  }
+
+  & input {
+    background-color: $color-black-200;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    padding: $space-xs;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    border-radius: 8px;
+    border: 1px solid $color-gray-100;
+    transition: all 0.3s;
+
+    &.error {
+      border-color: $color-red-100;
+
+      &:focus {
+        border-color: transparent;
+        outline: 1px solid $color-red-100 !important;
+      }
+    }
+
+    &::placeholder {
+      font-weight: $font-weight-medium;
+      font-size: 20px;
+      font-family: $font-family, sans-serif;
+    }
+  }
+
+  & textarea {
+    background-color: $color-black-200;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    border-radius: 8px;
+    border: 1px solid $color-gray-100;
+    padding: $space-xs;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    margin: 0;
+    resize: none;
+    transition: border-color 0.3s;
+    font-family: $font-family;
+
+    &.error {
+      border-color: $color-red-100;
+
+      &:focus {
+        border-color: transparent;
+        outline: 1px solid $color-red-100 !important;
+      }
+    }
+
+    &::placeholder {
+      font-family: $font-family;
+      font-size: 24px;
+      font-weight: $font-weight-medium;
+    }
+
+    &::-webkit-scrollbar {
+      width: 14px;
+      border-radius: 3px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: $color-black-400;
+    }
+    &::-webkit-scrollbar-thumb {
+      cursor: pointer;
+      background-color: #fff;
+      border-radius: 20px;
+      border: 3px solid $color-black-200;
+    }
+  }
+
+  & span {
+    display: block;
+    margin-top: $space-xxs;
+    font-size: 18px !important;
+    background-color: transparent;
+    color: $color-red-100 !important;
+  }
+
+  &.radio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & p {
+      margin-bottom: $space-xs;
+      background-color: $color-black-500;
+      display: block;
+      font-size: 24px !important;
+      font-weight: $font-weight-bold !important;
+      color: #fff !important;
+      padding-bottom: $space-xs !important;
+      width: 100%;
+    }
+
+    & div {
+      & label {
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+        width: max-content;
+        flex-wrap: wrap;
+        font-size: 19px;
+        margin-right: $space-sm;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      & input {
+        width: max-content;
+        margin-right: $space-xxs;
+
+        &.error {
+          border-color: $color-red-100;
+
+          &:focus {
+            border-color: transparent;
+            outline: 1px solid $color-red-100 !important;
+          }
+        }
+
+        &::placeholder {
+          font-weight: $font-weight-medium;
+          font-size: 20px;
+          font-family: $font-family, sans-serif;
+        }
+      }
+    }
+  }
+}
+
+@media #{$screen-sm} {
+  .form-group {
+    & label {
+      font-size: 22px;
+    }
+
+    & input {
+      font-size: 18px;
+
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+
+    & textarea {
+      font-size: 18px;
+
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media #{$screen-xs} {
+  .form-group {
+    & label {
+      font-size: 20px;
+    }
+
+    & input {
+      font-size: 16px;
+
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+    & span {
+      font-size: 15px !important;
+    }
+
+    & textarea {
+      font-size: 16px;
+
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+    &.radio {
+      & div {
+        & label {
+          margin-top: 4px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
