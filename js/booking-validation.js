@@ -2,7 +2,7 @@
  * Validation contact form
  * @property {HTMLElementForm} form
  */
-class BookingValidation {
+export class BookingValidation {
   constructor() {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.createOjectWithValue = this.createOjectWithValue.bind(this);
@@ -110,5 +110,3 @@ class BookingValidation {
     this.form.prepend(cardSuccess);
   }
 }
-
-new BookingValidation();

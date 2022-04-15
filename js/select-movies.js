@@ -1,4 +1,3 @@
-import { movies } from "./data/movies.js";
 import { Modal } from "./modal-movie.js";
 import { fakeAsyncFunction } from "./utils/fakeAsyncFunction.js";
 
@@ -9,7 +8,7 @@ import { fakeAsyncFunction } from "./utils/fakeAsyncFunction.js";
  * @property {Array} movies
  * @property {HTMLDivElement} wrapperContent
  */
-class SelectMovies {
+export class SelectMovies {
   lastestElementClick;
 
   /**
@@ -155,5 +154,3 @@ class CreateCardMovieDOM {
     this.container.appendChild(card);
   }
 }
-
-new SelectMovies(movies);

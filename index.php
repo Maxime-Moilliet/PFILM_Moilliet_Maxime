@@ -192,12 +192,7 @@
         </div>
     </aside>
 
-    <script src="./js/slider-days.js" type="module" defer></script>
-    <script src="./js/slider-movies.js" type="module" defer></script>
-    <script src="./js/slider-actualities.js" type="module" defer></script>
-    <script src="./js/select-movies.js" type="module" defer></script>
-    <script src="./js/contact-validation.js" defer></script>
-    <script src="./js/booking-validation.js" defer></script>
+    <script src="./js/main.js" type="module" defer></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
  * Validation contact form
  * @property {HTMLElementForm} form
  */
-class ContactValidation {
+export class ContactValidation {
   constructor() {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.createOjectWithValue = this.createOjectWithValue.bind(this);
@@ -120,4 +120,4 @@ class ContactValidation {
   }
 }
 
-new ContactValidation();
+
